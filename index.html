@@ -16,7 +16,7 @@
     height: 0; 
     overflow: hidden; 
     z-index:-1;
-    content:url('/toggle_air.png') url('/toggle_gas.png') url('/cirbtn_off.png') url('/cirbtn_on.png') url('/cirbtn_check.png') url('/cirbtn_warm.png');
+    content:url('./data/toggle_air.png') url('./data/toggle_gas.png') url('./data/cirbtn_off.png') url('./data/cirbtn_on.png') url('./data/cirbtn_off.png') url('./data/cirbtn_warm.png');
   }
   h2 {color: #F8F4F4; margin: 5.0rem auto 3.0rem; text-decoration: underline;}
   h3 {color: #E6D00A;}
@@ -27,7 +27,7 @@
     border: none;
     border-radius:0%;
     font-size: 0rem;
-    background: url('/toggle_air.png') no-repeat;
+    background: url('./data/toggle_air.png') no-repeat;
     cursor: pointer;
   }
   .thingsBtn{
@@ -39,7 +39,7 @@
     font-size: 0rem;
     padding: 2.0rem 2.0rem;
     margin: 1.0rem auto;
-    background: url('/cirbtn_off.png') no-repeat;
+    background: url('./data/cirbtn_off.png') no-repeat;
     cursor: pointer;}
   .formBox{
     margin: 0 auto;
@@ -97,8 +97,7 @@
 </head>
 <body>
 <h2 align: center>NANO BUBBLE GENERATOR</h2>
-)=====";
-const char BODY_CTRL[] PROGMEM = R"=====(
+
 <br>
 <div>
   <button id='modBTN' class='modBtn' onclick='modClick()'>GAS</button>
@@ -107,8 +106,7 @@ const char BODY_CTRL[] PROGMEM = R"=====(
   <button id='thingsBTN' class='thingsBtn' onclick='thingsClick()'>ON</button> 
 </div>
 <br>
-)=====";
-const char BODY_CONFIG1[] PROGMEM = R"=====(
+
 <div>
   <input type='button' class='submit' value='CONFIGURATION' onclick='configShow()'>
 </div>
@@ -129,8 +127,7 @@ const char BODY_CONFIG1[] PROGMEM = R"=====(
       <label><h4>Network</h4></label>
       <select type='text' name='NetId' required>
         <option value=''>Select IoT Network</option>
-)=====";
-const char BODY_CONFIG2[] PROGMEM = R"=====(
+
       </select>
     </div>
     <div class='inputW'>
@@ -182,21 +179,21 @@ const char BODY_CONFIG2[] PROGMEM = R"=====(
     }
   }
   function selectGas(){
-    mbtnID.style.backgroundImage = "url('/toggle_gas.png')";
+    mbtnID.style.backgroundImage = "url('./data/toggle_gas.png')";
     mbtnID.innerHTML = 'AIR';
   }
   function selectAir(){
-    mbtnID.style.backgroundImage = "url('/toggle_air.png')";
+    mbtnID.style.backgroundImage = "url('./data/toggle_air.png')";
     mbtnID.innerHTML = 'GAS';
   }
   function selectOn(){
     mbtnID.disabled = true;
-    tbtnID.style.backgroundImage = "url('/cirbtn_on.png')";
+    tbtnID.style.backgroundImage = "url('./data/cirbtn_on.png')";
     tbtnID.innerHTML = 'OFF';
   }
   function selectOff(){
     mbtnID.disabled = false;
-    tbtnID.style.backgroundImage = "url('/cirbtn_off.png')";
+    tbtnID.style.backgroundImage = "url('./data/cirbtn_off.png')";
     tbtnID.innerHTML = 'ON';
   }
   function modClick(){
